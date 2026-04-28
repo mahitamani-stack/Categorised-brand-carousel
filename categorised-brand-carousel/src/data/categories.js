@@ -1,6 +1,5 @@
 const BASE =
-  'https://raw.githubusercontent.com/mahitamani-stack/brand-carousel/566efbb0f2bed410072b7e34149e90777758b0b2/client/public/logos';
-
+  'https://raw.githubusercontent.com/mahitamani-stack/brand-carousel/main/client/public/logos';
 const logo = (file, label) => ({ src: `${BASE}/${file}.png`, alt: label ?? file });
 
 export const categories = [
