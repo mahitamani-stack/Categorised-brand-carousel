@@ -40,15 +40,23 @@ export default function CategoryList({ categories, active, onSelect }) {
                 <motion.span
                   animate={{ color: isActive ? 'rgba(255,255,255,0.22)' : 'rgba(255,255,255,0.1)' }}
                   transition={spring}
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.1em', flexShrink: 0 }}
+                  style={{ fontFamily: 'var(--font-mono)', fontSize: '30px', letterSpacing: '0.1em', flexShrink: 0 }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </motion.span>
                 <motion.span
                   animate={{ fontSize: isActive ? '42px' : isHovered ? '27px' : '21px', color: `rgba(255,255,255,${alpha})` }}
                   transition={spring}
-                  style={{ fontFamily: 'var(--font-display)', fontWeight: isActive ? 700 : 300, fontStyle: isActive ? 'italic' : 'normal', lineHeight: 1.2, letterSpacing: isActive ? '-0.02em' : '0.005em', whiteSpace: 'nowrap', display: 'block' }}
-                >
+style={{
+  fontFamily: 'var(--font-display)',
+  fontWeight: isActive ? 700 : 300,
+  fontStyle: 'normal',
+  textTransform: 'uppercase',
+  lineHeight: 1.2,
+  letterSpacing: isActive ? '0.04em' : '0.08em',
+  whiteSpace: 'nowrap',
+  display: 'block',
+}}                >
                   {name}
                 </motion.span>
               </div>
