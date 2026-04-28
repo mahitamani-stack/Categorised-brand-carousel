@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 
-const CARD_W = 322;
-const CARD_H = 202;
+const CARD_W = 422;
+const CARD_H = 302;
 const GAP = 36;
 const SCALE_STEP = 0.14;
 const Z_STEP = 36;
