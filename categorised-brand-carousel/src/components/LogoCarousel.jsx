@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 
-const CARD_W = 230;
-const CARD_H = 144;
+const CARD_W = 322;
+const CARD_H = 202;
 const GAP = 36;
 const SCALE_STEP = 0.14;
 const Z_STEP = 36;
@@ -73,7 +73,7 @@ export default function LogoCarousel({ images, categoryName }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'contain',
-                padding: '20px',
+                padding: '10px',
                 display: 'block',
                 boxSizing: 'border-box',
               }}
