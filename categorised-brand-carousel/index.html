@@ -3,19 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brand Carousel</title>
+    <title>Brand Catalogue</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,600;1,700&family=Space+Mono&display=swap" rel="stylesheet" />
     <style>
+      :root {
+        --bg:           #0B0A08;
+        --bg-r:         #0E0C0A;
+        --text:         #EDE8DE;
+        --muted:        rgba(237,232,222,0.22);
+        --hover:        rgba(237,232,222,0.52);
+        --accent:       #C8974A;
+        --accent-dim:   rgba(200,151,74,0.09);
+        --divider:      rgba(200,151,74,0.20);
+        --card-bg:      #F2ECE2;
+        --font-serif:   'Cormorant Garamond', Georgia, serif;
+        --font-mono:    'Space Mono', monospace;
+      }
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html, body, #root { width: 100%; height: 100%; }
-      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #111; }
-      ::-webkit-scrollbar { width: 4px; }
+      body { font-family: var(--font-serif); background: var(--bg); color: var(--text); }
+      ::-webkit-scrollbar { width: 3px; }
       ::-webkit-scrollbar-track { background: transparent; }
-      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+      ::-webkit-scrollbar-thumb { background: var(--divider); }
+
+      /* Grain overlay */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+        background-size: 200px 200px;
+      }
+
+      @keyframes fadeRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
     </style>
   </head>
   <body>
