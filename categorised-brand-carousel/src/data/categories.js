@@ -10,7 +10,6 @@ export const categories = [
       logo('campacola', 'Campa Cola'),
       logo('cocacola', 'Coca-Cola'),
       logo('horlicks', 'Horlicks'),
-      logo('keventers', 'Keventers'),
       logo('mirinda', 'Mirinda'),
       logo('nescafe', 'Nescafé'),
       logo('pepsi', 'Pepsi'),
